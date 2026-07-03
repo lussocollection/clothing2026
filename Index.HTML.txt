@@ -1,0 +1,2195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusso Collection | Premium Custom Apparel Crafted with Purpose</title>
+    <meta name="description" content="Lusso Collection - Premium custom apparel, promotional wear, Catholic apparel, and faith-inspired clothing crafted with purpose for churches, schools, and organizations in Sri Lanka.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --gold: #C9A96E;
+            --gold-light: #D4B87A;
+            --gold-dark: #A88B4A;
+            --burgundy: #6B1A2A;
+            --burgundy-light: #8B2D3D;
+            --black: #0A0A0A;
+            --charcoal: #1A1A1A;
+            --dark-gray: #2A2A2A;
+            --medium-gray: #6B6B6B;
+            --light-gray: #F5F5F5;
+            --off-white: #FAFAFA;
+            --white: #FFFFFF;
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --shadow-soft: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-luxury: 0 8px 40px rgba(0,0,0,0.12);
+            --shadow-gold: 0 4px 20px rgba(201, 169, 110, 0.3);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+        body {
+            font-family: 'Inter', 'Poppins', sans-serif;
+            color: var(--charcoal);
+            background: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAVIGATION */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .navbar.scrolled { box-shadow: var(--shadow-soft); }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--black);
+            letter-spacing: 2px;
+        }
+        .logo span { color: var(--gold); }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--charcoal);
+            position: relative;
+            padding: 8px 0;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta {
+            background: var(--gold);
+            color: var(--white) !important;
+            padding: 12px 28px !important;
+            border-radius: 30px;
+            font-weight: 600 !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover {
+            background: var(--gold-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--charcoal);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        .hero-bg-pattern {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(201, 169, 110, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(107, 26, 42, 0.05) 0%, transparent 50%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .hero-text { animation: fadeInUp 1s ease-out; }
+        .hero-tag {
+            display: inline-block;
+            background: rgba(201, 169, 110, 0.15);
+            color: var(--gold-dark);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            border: 1px solid rgba(201, 169, 110, 0.3);
+        }
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+        .hero h1 .highlight { color: var(--gold); font-style: italic; }
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--medium-gray);
+            margin-bottom: 40px;
+            max-width: 520px;
+            line-height: 1.8;
+        }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary {
+            background: var(--gold);
+            color: var(--white);
+            box-shadow: var(--shadow-gold);
+        }
+        .btn-primary:hover {
+            background: var(--gold-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(201, 169, 110, 0.4);
+        }
+        .btn-secondary {
+            background: var(--white);
+            color: var(--charcoal);
+            border: 2px solid var(--charcoal);
+        }
+        .btn-secondary:hover {
+            background: var(--charcoal);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        .hero-visual { position: relative; animation: fadeInRight 1.2s ease-out; }
+        .hero-image-container {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-luxury);
+        }
+        .hero-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .hero-image-container:hover .hero-image { transform: scale(1.05); }
+        .hero-float-card {
+            position: absolute;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 28px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-luxury);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            animation: float 3s ease-in-out infinite;
+        }
+        .hero-float-card.card-1 { top: 10%; right: -20px; animation-delay: 0s; }
+        .hero-float-card.card-2 { bottom: 15%; left: -30px; animation-delay: 1.5s; }
+        .float-icon {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+        .float-text h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--black);
+        }
+        .float-text p { font-size: 0.75rem; color: var(--medium-gray); }
+
+        /* SECTION STYLES */
+        .section { padding: 100px 0; position: relative; }
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        .section-label {
+            display: inline-block;
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: 2.8rem;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+        .section-subtitle {
+            color: var(--medium-gray);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* ABOUT */
+        .about { background: var(--white); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .about-image {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-luxury);
+        }
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .about-image:hover img { transform: scale(1.05); }
+        .about-badge {
+            position: absolute;
+            bottom: 30px;
+            right: -20px;
+            background: var(--gold);
+            color: var(--white);
+            padding: 20px 28px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-gold);
+        }
+        .about-badge h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .about-badge p { font-size: 0.8rem; opacity: 0.9; }
+        .about-content h2 { font-size: 2.4rem; margin-bottom: 24px; }
+        .about-content p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 18px;
+            background: var(--off-white);
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .about-feature i { color: var(--gold); font-size: 1.1rem; }
+        .about-feature span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--charcoal);
+        }
+
+        /* QUALITY */
+        .quality {
+            background: linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%);
+        }
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .quality-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .quality-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .quality-card:hover::before { transform: scaleX(1); }
+        .quality-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-luxury);
+        }
+        .quality-icon {
+            width: 64px; height: 64px;
+            background: linear-gradient(135deg, rgba(201, 169, 110, 0.15), rgba(201, 169, 110, 0.05));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+        .quality-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--black);
+        }
+        .quality-card p {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* CATEGORIES */
+        .categories { background: var(--white); }
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .category-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            cursor: pointer;
+        }
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .category-card:hover img { transform: scale(1.1); }
+        .category-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 40px 28px 28px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            color: var(--white);
+            transition: var(--transition);
+        }
+        .category-card:hover .category-overlay { padding-bottom: 40px; }
+        .category-overlay h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .category-overlay p {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin-bottom: 16px;
+        }
+        .category-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .category-btn i { transition: transform 0.3s ease; }
+        .category-card:hover .category-btn i { transform: translateX(4px); }
+
+        /* WHAT SETS US APART */
+        .apart {
+            background: var(--charcoal);
+            color: var(--white);
+        }
+        .apart .section-label { color: var(--gold); }
+        .apart .section-title { color: var(--white); }
+        .apart-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .apart-card {
+            background: rgba(255,255,255,0.05);
+            padding: 40px 28px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+        .apart-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-6px);
+            border-color: rgba(201, 169, 110, 0.3);
+        }
+        .apart-icon {
+            width: 60px; height: 60px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: var(--white);
+            font-size: 1.3rem;
+        }
+        .apart-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .apart-card p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        /* SERVICES */
+        .services { background: var(--off-white); }
+        .services-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .services-image {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-luxury);
+        }
+        .services-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .services-list { display: grid; gap: 16px; }
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 24px;
+            background: var(--white);
+            border-radius: 16px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .service-item:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow-soft);
+            border-color: rgba(201, 169, 110, 0.2);
+        }
+        .service-icon {
+            width: 52px; height: 52px;
+            min-width: 52px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.1rem;
+        }
+        .service-text h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--black);
+        }
+        .service-text p {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* FAITH COLLECTION */
+        .faith {
+            background: linear-gradient(135deg, var(--burgundy) 0%, #4A1520 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .faith::before {
+            content: '';
+            position: absolute;
+            top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(201, 169, 110, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .faith .section-header { position: relative; z-index: 2; }
+        .faith .section-label { color: var(--gold-light); }
+        .faith .section-title { color: var(--white); }
+        .faith .section-subtitle { color: rgba(255,255,255,0.8); }
+        .faith-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            position: relative;
+            z-index: 2;
+        }
+        .faith-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 36px 28px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .faith-card:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-8px);
+            border-color: rgba(201, 169, 110, 0.3);
+        }
+        .faith-verse-ref {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .faith-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .faith-card .verse-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        .faith-cta {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* GALLERY */
+        .gallery { background: var(--white); }
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .gallery-filter {
+            padding: 10px 24px;
+            border-radius: 30px;
+            border: 1px solid rgba(0,0,0,0.1);
+            background: var(--white);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--medium-gray);
+        }
+        .gallery-filter:hover,
+        .gallery-filter.active {
+            background: var(--gold);
+            color: var(--white);
+            border-color: var(--gold);
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+        .gallery-item.tall {
+            grid-row: span 2;
+            aspect-ratio: auto;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-overlay i { color: var(--white); font-size: 2rem; }
+
+        /* TESTIMONIALS */
+        .testimonials { background: var(--off-white); }
+        .testimonials-slider {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .testimonial-card {
+            background: var(--white);
+            padding: 50px 40px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .testimonial-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--charcoal);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+        .testimonial-avatar {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+        }
+        .testimonial-info h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--black);
+        }
+        .testimonial-info p {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+        }
+        .testimonial-stars {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* PROCESS */
+        .process { background: var(--white); }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+        .process-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%; right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+            z-index: 0;
+        }
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .step-number {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: var(--white);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            box-shadow: var(--shadow-gold);
+        }
+        .process-step h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--black);
+        }
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            line-height: 1.6;
+        }
+
+        /* FAQ */
+        .faq { background: var(--off-white); }
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            gap: 12px;
+        }
+        .faq-item {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .faq-item:hover { box-shadow: var(--shadow-soft); }
+        .faq-question {
+            padding: 24px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--black);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .faq-question:hover { color: var(--gold); }
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--gold);
+        }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .faq-item.active .faq-answer { max-height: 500px; }
+        .faq-answer-inner {
+            padding: 0 28px 24px;
+            color: var(--medium-gray);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* LEADERSHIP */
+        .leadership { background: var(--white); }
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .leader-card {
+            background: var(--off-white);
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .leader-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-luxury);
+        }
+        .leader-image {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .leader-card:hover .leader-image { transform: scale(1.05); }
+        .leader-content { padding: 32px 28px; }
+        .leader-role {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .leader-content h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--black);
+        }
+        .leader-content .leader-title {
+            font-size: 0.9rem;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .leader-content p {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+            line-height: 1.7;
+            font-style: italic;
+        }
+        .spiritual-note {
+            background: linear-gradient(135deg, var(--burgundy), var(--burgundy-light));
+            color: var(--white);
+            padding: 20px 24px;
+            border-radius: 16px;
+            margin-top: 20px;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            border-left: 4px solid var(--gold);
+        }
+        .spiritual-note i { color: var(--gold); margin-right: 8px; }
+
+        /* CONTACT */
+        .contact {
+            background: linear-gradient(180deg, var(--charcoal) 0%, var(--black) 100%);
+            color: var(--white);
+        }
+        .contact .section-label { color: var(--gold); }
+        .contact .section-title { color: var(--white); }
+        .contact .section-subtitle { color: rgba(255,255,255,0.7); }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        .contact-info h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .contact-icon {
+            width: 48px; height: 48px;
+            min-width: 48px;
+            background: rgba(201, 169, 110, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.1rem;
+        }
+        .contact-text h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .contact-text p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        .contact-form {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.08);
+            color: var(--white);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255,255,255,0.12);
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: rgba(255,255,255,0.4); }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 48px;
+            margin-bottom: 60px;
+        }
+        .footer-brand .logo {
+            color: var(--white);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .footer-brand p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+        .footer-social { display: flex; gap: 12px; }
+        .footer-social a {
+            width: 44px; height: 44px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+        .footer-social a:hover {
+            background: var(--gold);
+            transform: translateY(-3px);
+        }
+        .footer-column h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+            padding-left: 4px;
+        }
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .footer-contact-item i {
+            color: var(--gold);
+            margin-top: 4px;
+            font-size: 0.9rem;
+        }
+        .footer-contact-item span {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+        .footer-newsletter { margin-top: 24px; }
+        .footer-newsletter h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .newsletter-form { display: flex; gap: 8px; }
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.08);
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+        .newsletter-form input::placeholder { color: rgba(255,255,255,0.4); }
+        .newsletter-form button {
+            padding: 12px 20px;
+            border-radius: 10px;
+            background: var(--gold);
+            color: var(--white);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .newsletter-form button:hover { background: var(--gold-dark); }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 24px;
+            text-align: center;
+        }
+        .footer-bottom p { font-size: 0.85rem; opacity: 0.5; }
+
+        /* FLOATING WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px; right: 30px;
+            width: 60px; height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+            50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6); }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-text { order: 1; }
+            .hero-visual { order: 2; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero-subtitle { margin: 0 auto 40px; }
+            .hero-buttons { justify-content: center; }
+            .about-grid, .services-content, .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .quality-grid, .apart-grid { grid-template-columns: repeat(2, 1fr); }
+            .categories-grid, .faith-grid, .leadership-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-grid { grid-template-columns: repeat(3, 1fr); }
+            .process-grid::before { display: none; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 2rem; }
+            .quality-grid, .apart-grid, .categories-grid, .faith-grid, .leadership-grid, .gallery-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr; }
+            .about-features { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .form-row { grid-template-columns: 1fr; }
+            .hero-float-card { display: none; }
+            .section { padding: 60px 0; }
+        }
+
+        /* Mobile Menu */
+        .mobile-nav {
+            position: fixed;
+            top: 0; right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--white);
+            z-index: 1001;
+            padding: 100px 32px 32px;
+            transition: right 0.4s ease;
+            box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+        }
+        .mobile-nav.active { right: 0; }
+        .mobile-nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .mobile-nav-overlay.active { opacity: 1; visibility: visible; }
+        .mobile-nav-links { list-style: none; }
+        .mobile-nav-links li { margin-bottom: 8px; }
+        .mobile-nav-links a {
+            display: block;
+            padding: 14px 0;
+            font-size: 1rem;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            color: var(--charcoal);
+        }
+        .mobile-nav-close {
+            position: absolute;
+            top: 24px; right: 24px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--charcoal);
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">LUSSO <span>COLLECTION</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#leadership">Our Leadership</a></li>
+                <li><a href="#categories">Shop</a></li>
+                <li><a href="#services">Custom Orders</a></li>
+                <li><a href="#faith">The Collection</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#leadership">Our Leadership</a></li>
+            <li><a href="#categories">Shop</a></li>
+            <li><a href="#services">Custom Orders</a></li>
+            <li><a href="#faith">The Collection</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-tag">Premium Custom Apparel</span>
+                <h1>Premium Custom Apparel <span class="highlight">Crafted with Purpose</span></h1>
+                <p class="hero-subtitle">From custom apparel and promotional wear to Catholic and faith-inspired clothing, Lusso Collection creates garments that inspire confidence, represent your identity, and express your values.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-file-invoice"></i> Request a Quote
+                    </a>
+                    <a href="#categories" class="btn btn-secondary">
+                        <i class="fas fa-arrow-right"></i> Explore Collections
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&h=600&fit=crop" alt="Premium Custom Apparel" class="hero-image">
+                </div>
+                <div class="hero-float-card card-1">
+                    <div class="float-icon"><i class="fas fa-award"></i></div>
+                    <div class="float-text">
+                        <h4>Premium Quality</h4>
+                        <p>Finest fabrics & craftsmanship</p>
+                    </div>
+                </div>
+                <div class="hero-float-card card-2">
+                    <div class="float-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <div class="float-text">
+                        <h4>Fast Delivery</h4>
+                        <p>7-14 business days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1441986300917-6464bdaaae3c?w=600&h=500&fit=crop" alt="Lusso Collection Workshop">
+                    <div class="about-badge">
+                        <h3>10+</h3>
+                        <p>Years of Excellence</p>
+                    </div>
+                </div>
+                <div class="about-content animate-on-scroll">
+                    <span class="section-label">About Us</span>
+                    <h2>About Lusso Collection</h2>
+                    <p>Lusso Collection is a premium clothing brand dedicated to designing and producing high-quality apparel for churches, schools, ministries, organizations, businesses, events, and individuals.</p>
+                    <p>We specialize in custom apparel, promotional wear, Catholic apparel, and faith-inspired clothing. Our mission is to combine premium craftsmanship, creative design, and meaningful purpose to produce garments that represent identity, professionalism, excellence, and faith.</p>
+                    <div class="about-features">
+                        <div class="about-feature"><i class="fas fa-gem"></i><span>Premium Craftsmanship</span></div>
+                        <div class="about-feature"><i class="fas fa-palette"></i><span>Creative Designs</span></div>
+                        <div class="about-feature"><i class="fas fa-print"></i><span>Custom Printing</span></div>
+                        <div class="about-feature"><i class="fas fa-cross"></i><span>Faith-Inspired Mission</span></div>
+                        <div class="about-feature"><i class="fas fa-heart"></i><span>Customer Satisfaction</span></div>
+                        <div class="about-feature"><i class="fas fa-eye"></i><span>Attention to Detail</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Section -->
+    <section class="section quality" id="quality">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Our Promise</span>
+                <h2 class="section-title">Quality Craftsmanship Meets Creative Vision</h2>
+                <p class="section-subtitle">Lusso Collection was founded with a simple belief: every garment should tell a story. We combine premium fabrics, expert craftsmanship, and innovative design.</p>
+            </div>
+            <div class="quality-grid">
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-icon"><i class="fas fa-gem"></i></div>
+                    <h3>Premium Fabrics</h3>
+                    <p>Only the finest materials sourced for lasting comfort and durability.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-icon"><i class="fas fa-print"></i></div>
+                    <h3>Custom Printing</h3>
+                    <p>State-of-the-art printing technology for vibrant, long-lasting designs.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-icon"><i class="fas fa-vector-square"></i></div>
+                    <h3>Professional Embroidery</h3>
+                    <p>Expert embroidery with precise stitching and premium thread quality.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-icon"><i class="fas fa-cross"></i></div>
+                    <h3>Faith-Inspired Designs</h3>
+                    <p>Meaningful designs rooted in Scripture and Catholic tradition.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-icon"><i class="fas fa-search"></i></div>
+                    <h3>Attention to Detail</h3>
+                    <p>Every stitch, print, and finish is carefully inspected for perfection.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Efficient production without compromising on quality or craftsmanship.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Exceptional Customer Care</h3>
+                    <p>Dedicated support from concept to delivery, tailored to your needs.</p>
+                </div>
+                <div class="quality-card animate-on-scroll">
+                    <div class="quality-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Purpose-Driven</h3>
+                    <p>Every garment crafted with meaning, identity, and values in mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section categories" id="categories">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Our Collections</span>
+                <h2 class="section-title">Featured Categories</h2>
+                <p class="section-subtitle">Explore our premium range of custom apparel and faith-inspired clothing.</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=400&fit=crop" alt="Custom Apparel">
+                    <div class="category-overlay">
+                        <h3>Custom Apparel</h3>
+                        <p>Personalized t-shirts, hoodies, and more with your unique designs.</p>
+                        <span class="category-btn">Explore <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="category-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?w=500&h=400&fit=crop" alt="Promotional Wear">
+                    <div class="category-overlay">
+                        <h3>Promotional Wear</h3>
+                        <p>Branded merchandise that elevates your business presence.</p>
+                        <span class="category-btn">Explore <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="category-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=500&h=400&fit=crop" alt="Catholic Apparel">
+                    <div class="category-overlay">
+                        <h3>Catholic Apparel</h3>
+                        <p>Faith-inspired designs rooted in Catholic tradition and devotion.</p>
+                        <span class="category-btn">Explore <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="category-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop" alt="Faith-Inspired Clothing">
+                    <div class="category-overlay">
+                        <h3>Faith-Inspired Clothing</h3>
+                        <p>Meaningful clothing for ministries, churches, and individuals.</p>
+                        <span class="category-btn">Explore <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="category-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&h=400&fit=crop" alt="Church Apparel">
+                    <div class="category-overlay">
+                        <h3>Church Apparel</h3>
+                        <p>Unifying garments designed specifically for church communities.</p>
+                        <span class="category-btn">Explore <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="category-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&h=400&fit=crop" alt="School Apparel">
+                    <div class="category-overlay">
+                        <h3>School Apparel</h3>
+                        <p>Custom spirit wear that builds pride and school community.</p>
+                        <span class="category-btn">Explore <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Sets Us Apart -->
+    <section class="section apart" id="apart">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Why Choose Us</span>
+                <h2 class="section-title">What Sets Us Apart</h2>
+                <p class="section-subtitle">Every garment we create reflects our commitment to quality, creativity, and customer satisfaction.</p>
+            </div>
+            <div class="apart-grid">
+                <div class="apart-card animate-on-scroll">
+                    <div class="apart-icon"><i class="fas fa-gem"></i></div>
+                    <h3>Premium Quality Materials</h3>
+                    <p>We source only the finest fabrics and materials for every garment we create.</p>
+                </div>
+                <div class="apart-card animate-on-scroll">
+                    <div class="apart-icon"><i class="fas fa-print"></i></div>
+                    <h3>Custom Printing</h3>
+                    <p>State-of-the-art printing technology delivers vibrant, long-lasting designs.</p>
+                </div>
+                <div class="apart-card animate-on-scroll">
+                    <div class="apart-icon"><i class="fas fa-vector-square"></i></div>
+                    <h3>Professional Embroidery</h3>
+                    <p>Expert embroidery services with precise stitching and premium thread.</p>
+                </div>
+                <div class="apart-card animate-on-scroll">
+                    <div class="apart-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Modern Designs</h3>
+                    <p>Contemporary, stylish designs that reflect current trends and timeless elegance.</p>
+                </div>
+                <div class="apart-card animate-on-scroll">
+                    <div class="apart-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Efficient production timelines without compromising on quality or attention to detail.</p>
+                </div>
+                <div class="apart-card animate-on-scroll">
+                    <div class="apart-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Competitive pricing with exceptional value for premium custom apparel.</p>
+                </div>
+                <div class="apart-card animate-on-scroll">
+                    <div class="apart-icon"><i class="fas fa-user-check"></i></div>
+                    <h3>Personalized Service</h3>
+                    <p>Dedicated support from concept to delivery, tailored to your unique needs.</p>
+                </div>
+                <div class="apart-card animate-on-scroll">
+                    <div class="apart-icon"><i class="fas fa-church"></i></div>
+                    <h3>Trusted by Organizations</h3>
+                    <p>Proudly serving churches, schools, and businesses with excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Our Services</span>
+                <h2 class="section-title">Custom Printing & Embroidery</h2>
+                <p class="section-subtitle">From screen printing to professional embroidery, we offer a full range of customization services to bring your vision to life with precision and care.</p>
+            </div>
+            <div class="services-content">
+                <div class="services-image animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=500&fit=crop" alt="Custom Printing Workshop">
+                </div>
+                <div class="services-list">
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon"><i class="fas fa-print"></i></div>
+                        <div class="service-text">
+                            <h4>Screen Printing</h4>
+                            <p>High-quality screen printing for vibrant, long-lasting designs on any garment.</p>
+                        </div>
+                    </div>
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon"><i class="fas fa-film"></i></div>
+                        <div class="service-text">
+                            <h4>DTF Printing</h4>
+                            <p>Direct-to-Film printing for detailed, full-color designs with exceptional durability.</p>
+                        </div>
+                    </div>
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon"><i class="fas fa-fire"></i></div>
+                        <div class="service-text">
+                            <h4>Heat Transfer Printing</h4>
+                            <p>Precision heat transfer for crisp, detailed designs on various fabric types.</p>
+                        </div>
+                    </div>
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon"><i class="fas fa-vector-square"></i></div>
+                        <div class="service-text">
+                            <h4>Embroidery</h4>
+                            <p>Premium embroidery services for a sophisticated, textured finish.</p>
+                        </div>
+                    </div>
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon"><i class="fas fa-image"></i></div>
+                        <div class="service-text">
+                            <h4>Logo Printing</h4>
+                            <p>Crisp logo reproduction that represents your brand with clarity.</p>
+                        </div>
+                    </div>
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="service-text">
+                            <h4>Custom Branding</h4>
+                            <p>Complete branding solutions from concept to finished product.</p>
+                        </div>
+                    </div>
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon"><i class="fas fa-boxes-stacked"></i></div>
+                        <div class="service-text">
+                            <h4>Bulk Orders</h4>
+                            <p>Efficient bulk production with consistent quality across every piece.</p>
+                        </div>
+                    </div>
+                    <div class="service-item animate-on-scroll">
+                        <div class="service-icon"><i class="fas fa-user"></i></div>
+                        <div class="service-text">
+                            <h4>Personalized Apparel</h4>
+                            <p>Individual customization for unique, one-of-a-kind garments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#contact" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Get a Custom Quote</a>
+            </div>
+        </div>
+    </section>
+    <!-- Faith Collection -->
+    <section class="section faith" id="faith">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Faith Collection</span>
+                <h2 class="section-title">Wear Your Faith with Purpose</h2>
+                <p class="section-subtitle">Inspirational designs rooted in Scripture, Catholic tradition, and Christian values — crafted with reverence and elegance.</p>
+            </div>
+            <div class="faith-grid">
+                <div class="faith-card animate-on-scroll">
+                    <span class="faith-verse-ref">Philippians 4:13</span>
+                    <h3>Scripture Verse Tee</h3>
+                    <p class="verse-text">"I can do all things through Christ who strengthens me."</p>
+                </div>
+                <div class="faith-card animate-on-scroll">
+                    <span class="faith-verse-ref">Galatians 2:20</span>
+                    <h3>Cross Design Hoodie</h3>
+                    <p class="verse-text">"I have been crucified with Christ. It is no longer I who live, but Christ lives in me."</p>
+                </div>
+                <div class="faith-card animate-on-scroll">
+                    <span class="faith-verse-ref">Luke 1:46</span>
+                    <h3>Marian Devotion Shirt</h3>
+                    <p class="verse-text">"My soul magnifies the Lord, and my spirit rejoices in God my Savior."</p>
+                </div>
+                <div class="faith-card animate-on-scroll">
+                    <span class="faith-verse-ref">2 Timothy 1:7</span>
+                    <h3>Faith Over Fear</h3>
+                    <p class="verse-text">"For God gave us a spirit not of fear but of power and love and self-control."</p>
+                </div>
+                <div class="faith-card animate-on-scroll">
+                    <span class="faith-verse-ref">Psalm 103:2</span>
+                    <h3>Blessed & Grateful</h3>
+                    <p class="verse-text">"Bless the Lord, O my soul, and forget not all His benefits."</p>
+                </div>
+                <div class="faith-card animate-on-scroll">
+                    <span class="faith-verse-ref">Ephesians 2:8</span>
+                    <h3>Grace & Mercy Tee</h3>
+                    <p class="verse-text">"For by grace you have been saved through faith, and this is not your own doing."</p>
+                </div>
+            </div>
+            <div class="faith-cta">
+                <a href="#contact" class="btn btn-primary"><i class="fas fa-cross"></i> Explore Faith Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Our Work Gallery</h2>
+                <p class="section-subtitle">Browse through our portfolio of custom apparel, printing, and embroidery projects.</p>
+            </div>
+            <div class="gallery-filters animate-on-scroll">
+                <button class="gallery-filter active" data-filter="all">All</button>
+                <button class="gallery-filter" data-filter="churches">Churches</button>
+                <button class="gallery-filter" data-filter="schools">Schools</button>
+                <button class="gallery-filter" data-filter="businesses">Businesses</button>
+                <button class="gallery-filter" data-filter="events">Events</button>
+                <button class="gallery-filter" data-filter="embroidery">Embroidery</button>
+                <button class="gallery-filter" data-filter="printing">Printing</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll" data-category="churches">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&h=400&fit=crop" alt="Church Apparel">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item tall animate-on-scroll" data-category="printing">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=800&fit=crop" alt="Printing Work">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item animate-on-scroll" data-category="schools">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=400&fit=crop" alt="School Apparel">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item animate-on-scroll" data-category="businesses">
+                    <img src="https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=400&fit=crop" alt="Business Apparel">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item animate-on-scroll" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop" alt="Event Merchandise">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item tall animate-on-scroll" data-category="embroidery">
+                    <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=800&fit=crop" alt="Embroidery Work">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item animate-on-scroll" data-category="churches">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Church Community">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="gallery-item animate-on-scroll" data-category="printing">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=400&h=400&fit=crop" alt="Custom Printing">
+                    <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn btn-secondary"><i class="fas fa-images"></i> View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Hear from churches, schools, and organizations who trust Lusso Collection.</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-quote">"Lusso Collection created the most beautiful ministry shirts for our youth retreat. The quality was exceptional, and the designs perfectly captured our message of faith and hope. We will definitely be ordering again."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face" alt="Father Michael Donovan" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Father Michael Donovan</h4>
+                            <p>Pastor, St. Mary's Catholic Church</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process" id="process">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">How It Works</span>
+                <h2 class="section-title">Ordering Process</h2>
+                <p class="section-subtitle">Simple, streamlined process from design to delivery.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h3>Send Your Design</h3>
+                    <p>Share your artwork, logo, or design idea with our team.</p>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <h3>Receive Your Quote</h3>
+                    <p>Get a detailed quote within 24 hours based on your requirements.</p>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <h3>Approve Mockup</h3>
+                    <p>Review and approve your digital mockup before production begins.</p>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">4</div>
+                    <h3>Production Begins</h3>
+                    <p>Your order enters our premium production process with quality control.</p>
+                </div>
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">5</div>
+                    <h3>Delivery</h3>
+                    <p>Your custom apparel is carefully packaged and shipped to your door.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Support</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about our products and services.</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>What is the minimum order quantity?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            The minimum order quantity depends on the type of product and customization. For most custom T-shirts and apparel, the minimum order is 10 pieces per design. For embroidery orders, the minimum order is 15 pieces. If you have a special requirement, feel free to contact us. We'll be happy to discuss the best option for your project.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>How long does production take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Standard production time is 7-14 business days after artwork approval. Rush orders are available for an additional fee and can be completed in as little as 3-5 business days. Timeline depends on order complexity and quantity.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>What printing methods do you offer?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We offer screen printing, DTF (Direct-to-Film) printing, heat transfer printing, and embroidery services. Each method has unique benefits depending on your design, fabric type, and quantity. We will recommend the best option for your project.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Can I see a sample before placing a bulk order?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes! We provide digital mockups for approval before production begins. Physical samples are available upon request for an additional fee, which is credited toward your final order.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>What file formats do you accept for artwork?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We accept vector files (AI, EPS, SVG, PDF) for best results. High-resolution PNG and PSD files (300 DPI or higher) are also accepted. If you need help with your design, our creative team can assist.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We accept bank deposits, bank transfers, and cash payments. For custom and bulk orders, we usually require a 50% advance payment before production begins. The remaining balance must be paid before your order is collected or delivered. If you have any questions about payment, our team will be happy to assist you.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Do you deliver nationwide?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes! We deliver all across Sri Lanka and also ship to any country worldwide. Delivery charges within Sri Lanka are based on the package weight and delivery location. For international orders, shipping costs depend on the package weight, destination country, and shipping method. We also offer local pickup if you prefer to collect your order. For bulk orders of 500 or more pieces, we provide door-to-door delivery for your convenience. If you have any special delivery requests or need international shipping, please contact us. We'll be happy to provide a custom shipping quote.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Do you offer discounts for churches and non-profits?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Absolutely. We are proud to offer special pricing for churches, ministries, schools, and non-profit organizations. Contact us with details about your organization for a customized quote.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Leadership Section -->
+    <section class="section leadership" id="leadership">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Our Team</span>
+                <h2 class="section-title">Our Leadership</h2>
+                <p class="section-subtitle">Meet the visionaries behind Lusso Collection who guide our mission of excellence and faith.</p>
+            </div>
+            <div class="leadership-grid">
+                <div class="leader-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&h=400&fit=crop&crop=face" alt="Mr. Samith Weerawickrama" class="leader-image">
+                    <div class="leader-content">
+                        <span class="leader-role">Chairman</span>
+                        <h3>Mr. Samith Weerawickrama</h3>
+                        <p class="leader-title">Chairman, Lusso Collection</p>
+                        <p>"At Lusso Collection, our vision is to create premium apparel that reflects excellence, creativity, and purpose. Every garment is crafted with care using quality materials and skilled workmanship to help churches, schools, organizations, businesses, and individuals proudly express their identity. We remain committed to delivering exceptional products, personalized service, and lasting value to every customer."</p>
+                    </div>
+                </div>
+                <div class="leader-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=400&fit=crop&crop=face" alt="Charith Thilakaratne" class="leader-image">
+                    <div class="leader-content">
+                        <span class="leader-role">Director</span>
+                        <h3>Charith Thilakaratne</h3>
+                        <p class="leader-title">Director, Lusso Collection</p>
+                        <p>"Lusso Collection was founded with a passion for quality and innovation. Every garment tells a story, and every design represents the people who wear it. Our team works closely with every client to ensure every order is completed with precision, creativity, and attention to detail. Your vision becomes our mission."</p>
+                    </div>
+                </div>
+                <div class="leader-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=400&fit=crop&crop=face" alt="Spiritual Advisor" class="leader-image">
+                    <div class="leader-content">
+                        <span class="leader-role">Spiritual Advisor</span>
+                        <h3>Spiritual Advisor</h3>
+                        <p class="leader-title">Catholic Priest & Spiritual Guide</p>
+                        <p>"Clothing can be more than what we wear—it can also become a witness to our faith. Through Lusso Collection's Catholic and faith-inspired apparel, we strive to proclaim the Gospel with reverence, authenticity, and excellence. I am honored to provide spiritual guidance for the development of these collections so that every design faithfully reflects Catholic teachings, traditions, and values while inspiring people to live and share their faith with confidence."</p>
+                        <div class="spiritual-note">
+                            <i class="fas fa-info-circle"></i>
+                            Our Catholic and Faith-Inspired Collections are developed under the guidance of our Spiritual Advisor to ensure they respectfully reflect Catholic teachings, traditions, and values.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Let's Create Something Amazing Together</h2>
+                <p class="section-subtitle">Ready to bring your vision to life? Contact us today for a custom quote, and let's create apparel that inspires confidence and expresses your values.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>lussocollection.lk@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="contact-text">
+                            <h4>WhatsApp</h4>
+                            <p>+94 77 040 0983</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-text">
+                            <h4>Address</h4>
+                            <p>Colombo Road, Mathawa, Kurunegala, Sri Lanka</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contact-text">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 7:00 PM<br>Saturday/Sunday: 10:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 32px;">
+                        <a href="https://wa.me/94770400983" class="btn btn-primary" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form animate-on-scroll">
+                    <h3 style="font-family: Inter, sans-serif; font-size: 1.3rem; font-weight: 600; margin-bottom: 24px;">Request a Custom Quote</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Contact Number *</label>
+                            <input type="tel" placeholder="+94 XX XXX XXXX" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Organization / School / Church (Optional)</label>
+                            <input type="text" placeholder="Your organization name">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">LUSSO <span>COLLECTION</span></a>
+                    <p>Premium custom apparel and faith-inspired clothing crafted with purpose for churches, schools, organizations, and individuals.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#leadership">Our Leadership</a></li>
+                        <li><a href="#categories">Shop</a></li>
+                        <li><a href="#services">Custom Orders</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#categories">Custom Apparel</a></li>
+                        <li><a href="#categories">Promotional Wear</a></li>
+                        <li><a href="#faith">Catholic Apparel</a></li>
+                        <li><a href="#faith">Faith Collection</a></li>
+                        <li><a href="#categories">School Apparel</a></li>
+                        <li><a href="#categories">Event Merchandise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Information</h4>
+                    <div class="footer-contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+94 77 040 0983</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>lussocollection.lk@gmail.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Colombo Road, Mathawa, Kurunegala, Sri Lanka</span>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lusso Collection. All rights reserved. Premium Custom Apparel Crafted with Purpose.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/94770400983" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        const mobileNavClose = document.getElementById('mobileNavClose');
+
+        function openMobileNav() {
+            mobileNav.classList.add('active');
+            mobileNavOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileNav() {
+            mobileNav.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileNav);
+        mobileNavClose.addEventListener('click', closeMobileNav);
+        mobileNavOverlay.addEventListener('click', closeMobileNav);
+
+        // Close mobile nav on link click
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', closeMobileNav);
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Gallery Filter
+        const galleryFilters = document.querySelectorAll('.gallery-filter');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                // Update active filter
+                galleryFilters.forEach(f => f.classList.remove('active'));
+                filter.classList.add('active');
+
+                const category = filter.dataset.filter;
+
+                galleryItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24 hours.');
+            this.reset();
+        });
+
+        // Newsletter form handler
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to our newsletter!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
